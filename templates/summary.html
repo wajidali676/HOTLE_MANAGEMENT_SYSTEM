@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Bill Summary</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+<h2>Bill Summary</h2>
+<p>Name: {{ data.name }}</p>
+<p>Days: {{ data.days }}</p>
+<p>Room Charges: Rs {{ data.room_cost }}</p>
+<p>Meal Charges: Rs {{ data.meal_cost }}</p>
+<h3>Total Bill: Rs {{ data.total }}</h3>
+<a href="/dashboard">Back</a>
+</body>
+</html>
