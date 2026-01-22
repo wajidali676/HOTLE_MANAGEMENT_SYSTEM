@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Room Booking</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+<h2>Room Booking</h2>
+<form method="post">
+<input type="text" name="name" placeholder="Customer Name" required>
+<input type="number" name="days" placeholder="Stay Days" required>
+
+
+<p>Per Day: Rs {{ day_price }}</p>
+<p>Per Month (30 days): Rs {{ month_price }}</p>
+
+
+<select name="meals">
+<option value="1">1 Meal / Day</option>
+<option value="2">2 Meals / Day</option>
+<option value="3">3 Meals / Day</option>
+</select>
+
+
+<button>Calculate Bill</button>
+</form>
+</body>
+</html>
